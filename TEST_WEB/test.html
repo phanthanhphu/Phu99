@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Page Title</title>
+</head>
+<style>
+	* {
+		margin: 0;
+		padding: 0;
+		font-family: 'Poppins', sans-serif;
+	}
+	body{
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		min-height: 100vh;
+		height: 100vh;
+	    background: #111;
+	}
+	
+	ul {
+		position: relative;
+		display: flex;
+		flex-direction: column ;
+		text-align: center;
+	}
+
+	ul li {
+		position: relative;
+		list-style: none;
+
+	}
+
+	ul li a {
+		position: relative;
+		display: inline-block;
+		text-decoration: none;
+		color: #dadada;
+		padding: 8px 15px;
+		font-size: 20px;
+		text-transform: uppercase;
+		font-weight: 500;
+		letter-spacing: 2px;
+	}
+	ul li a.active {
+		background: #00b5de;
+		color: #fff;
+	}
+
+</style>
+<body>
+
+<ul id="nav">
+    <li ><a href="test.html" >Home</a></li>
+    <li><a href="test1.html">Manage</a></li>
+    <li><a href="docs.aspx">Documents</a></li>
+    <li><a href="admin.aspx">Admin Panel</a></li>
+    <li><a href="past.aspx">View Past</a></li>
+</ul>
+
+<script type="text/javascript">
+       const currentLocation = location.href;
+       const menuItem = document.querySelectorAll('a');
+       const menuLenght = menuItem.length
+       for( let i = 0; i<menuLenght; i++){
+        if(menuItem[i].href === currentLocation){
+            menuItem[i].className = "active"
+        }
+       } 
+</script>
+</body>
+</html>
